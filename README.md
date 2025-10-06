@@ -8,7 +8,7 @@
 [![Vue 3](https://img.shields.io/badge/Vue.js-3.x-4FC08D.svg)](https://vuejs.org/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+     
 </div>
 
 SiteScore AI traduz dados geoespaciais do **OpenStreetMap** (via Overpass API) em *insights acionáveis* para auxiliar na escolha estratégica de pontos comerciais. Utilizando análise geoespacial avançada e machine learning, o sistema avalia localizações baseado em concorrência, fluxo de pessoas, transporte público, e mix de amenidades.
