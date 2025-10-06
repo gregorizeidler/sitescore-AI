@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* MapLibre GL CSS */
+@import 'maplibre-gl/dist/maplibre-gl.css';
+
+/* Mapbox GL Draw CSS */
+@import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* POI Tooltip Styles */
+.poi-tooltip .maplibregl-popup-content {
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  background: white;
+}
+
+.poi-tooltip .maplibregl-popup-tip {
+  border-top-color: white;
+}
+
+/* Remover padding padrão */
+.poi-tooltip .maplibregl-popup-content {
+  min-width: 150px;
+}
+
+/* Animação suave */
+.poi-tooltip {
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer animation for progress bar */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-white to-slate-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-200 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-200 active:scale-95;
+  }
+  
+  .card {
+    @apply bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl border border-slate-200/50 p-6;
+  }
+  
+  .input-modern {
+    @apply px-4 py-3 bg-white border-2 border-slate-200 rounded-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all outline-none;
+  }
+}
+
